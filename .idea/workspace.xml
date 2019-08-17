@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0d87dcd-ca04-498e-9801-3c7cd799729a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/webpage/jbhm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/jbhm/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws_static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ws_static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +139,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566030464352</updated>
-      <workItem from="1566030468932" duration="2754000" />
+      <workItem from="1566030468932" duration="3016000" />
     </task>
     <servers />
   </component>
