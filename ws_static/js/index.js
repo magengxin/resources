@@ -105,7 +105,7 @@ $('.status_tab3 li').on('click', function() {
 });
 $('.status_line li').on('click', function() {
   var num = $(this).index();
-  var showTab = $('.ai_box');
+  var showTab = $('.line_box');
   $(this).addClass('active_tab').siblings().removeClass('active_tab');
   showTab.eq(num).removeClass('hide').siblings('div').addClass('hide');
 });
