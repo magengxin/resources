@@ -1,0 +1,101 @@
+@charset "UTF-8"; /*! global style */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+ul,
+ol {
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+table {
+    border: 0;
+    border-collapse: collapse;
+}
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: 0;
+}
+i,
+em {
+    font-style: normal;
+}
+img {
+    border: 0;
+    vertical-align: top;
+}
+html,
+body {
+    width: 100%;
+    height: auto;
+}
+
+.pie_box{position: relative;}
+.zs_text>ul>li{position: absolute;display: block;text-align: center;}
+.zs_text>ul>li:nth-child(1){left:8%;top:21%;}
+.zs_text>ul>li:nth-child(2){left:31%;top:21%;}
+.zs_text>ul>li:nth-child(3){left:57%;top:21%;}
+.zs_text>ul>li:nth-child(4){left:80%;top:21%;}
+
+
+
+body,
+input,
+select,s
+textarea,
+button {
+    font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "PingFang SC", "Heiti SC", STHeiti,
+        "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "Droid Sans Fallback",
+        sans-serif;
+    outline: 0;
+}
+[type="text"],
+[type="password"],
+[type="tel"],
+[type="number"],
+[type="date"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+    font-size: 18px;
+    color: #666;
+}
+.clearfix:after {
+    display: block;
+    content: "";
+    visibility: none;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}

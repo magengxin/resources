@@ -1,0 +1,13 @@
+{
+  "data": [{
+    "MEASTYPE": "21",
+    "OBJID": "155",
+    "OBJTYPE": "5",
+    "POINTID": "665136",
+    "SBID": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP06",
+    "TERMINAL": "0",
+    "VALUE": "5628000256.000000"
+  }],
+  "result_desc": "成功",
+  "result_code": 0
+}

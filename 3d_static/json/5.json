@@ -1,0 +1,26 @@
+{
+	"data": [{
+		"YJZT": "2",
+		"YJLX": "1",
+		"YWDW": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP06",
+		"YJZTMS": "二级预警状态",
+		"YWDWMC": "浦东供电公司",
+		"YJMC": "预警状态"
+	}, {
+		"YJZT": "2",
+		"YJLX": "2",
+		"YWDW": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP06",
+		"YJZTMS": "二级抢修状态",
+		"YWDWMC": "浦东供电公司",
+		"YJMC": "抢修状态"
+	}, {
+		"YJZT": "1",
+		"YJLX": "3",
+		"YWDW": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP06",
+		"YJZTMS": "一级保电状态",
+		"YWDWMC": "浦东供电公司",
+		"YJMC": "保电状态"
+	}],
+	"result_desc": "成功",
+	"result_code": 0
+}

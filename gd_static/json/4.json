@@ -1,0 +1,29 @@
+{
+  "data" : [ {
+    "GDBH" : "123",
+    "XZ" : "121",
+    "NR" : "121",
+    "FL" : "投诉",
+    "SLSJ" : "2018-09-27 00:00:00.0",
+    "DQZT" : "1",
+    "JB" : "1",
+    "SSGS" : "FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP09",
+    "ID" : "1",
+    "LY" : "95598",
+    "RQ" : "2018-09-27 00:00:00.0"
+  }, {
+    "GDBH" : "456",
+    "XZ" : "212",
+    "NR" : "212",
+    "FL" : "举报",
+    "SLSJ" : "2018-09-27 00:00:00.0",
+    "DQZT" : "2",
+    "JB" : "2",
+    "SSGS" : "FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP03",
+    "ID" : "2",
+    "LY" : "12345",
+    "RQ" : "2018-09-27 00:00:00.0"
+  } ],
+  "result_desc" : "成功",
+  "result_code" : 0
+}
