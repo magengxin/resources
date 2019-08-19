@@ -1,6 +1,6 @@
 //防台防汛台风
 function getYjgjTaifeng(callback) {
-	debugger
+
 	var url = basepath + "interface/GETTFYJTJ/-1/0";
 	var param = {
 		"SDATE": moment().format("YYYY-MM-DD 00:00:00"),
@@ -18,7 +18,7 @@ function getYjgjTaifeng(callback) {
 }
 ////防台防汛雷电
 //function getYjgjLeidian(callback) {
-//	debugger
+//
 //	var url = basepath+"thunder/linePredictsSta";
 //	var param = {"time":moment().format("YYYY-M-D HH:00:00")};
 //	$.ajax({

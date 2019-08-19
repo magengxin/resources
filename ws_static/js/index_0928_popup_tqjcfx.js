@@ -104,7 +104,7 @@ var Popup_tqjsfx = (function() {
                     },
                 },
                 series: [
-                
+
                     {
                         type: 'bar',
                         name: "当月",
@@ -459,7 +459,7 @@ var Popup_tqjsfx = (function() {
                     data: (function () {
                     		return data.ddy.lastYear
                     })()
-                    
+
                     // areaStyle: {
                     //     opacity: 0.1
                     // },
@@ -528,7 +528,7 @@ var Popup_tqjsfx = (function() {
                     // },
                 },
             ]
-        });        
+        });
         chart_sxbph.setOption(option_sxbph);
 
     }
@@ -579,9 +579,9 @@ var Popup_tqjsfx = (function() {
 
 
 function tqjcfx_init(){
-	debugger;
+
 	$('#l_pop_tqjc_y').text(moment().format("YYYY")+'年');
-	
+
     initCount(moment().add(-2 , "month").format("YYYYMM"),moment().add(-1 , "month").format("YYYYMM"));//初始化分布统计
 //  initAnaly("8a812897493378a00149567740676661", '2019');//初始化趋势分析
 }
@@ -711,7 +711,7 @@ function initAnaly(companyId, year){
 			}
 		}
 	    Popup_tqjsfx.setData({
-	
+
 	        zz: {
 	            curYear: zzCurData,
 	            lastYear: zzLastData
@@ -728,8 +728,8 @@ function initAnaly(companyId, year){
 	            curYear: sxbphCurData,
 	            lastYear: sxbphLastData
 	        }
-	
-	
+
+
 	    });
 
     }
@@ -1554,7 +1554,7 @@ function initCount(kssj, jssj) {
         gzCurData.shift();gzLastData.shift();
         ddyCurData.shift();ddyLastData.shift();
         sxbphCurData.shift();sxbphLastData.shift();
-		
+
 		if(jssj.split(0,4) == '2019'){
 			var nowMonth = new Date().getMonth();//获取当前月份:0-11 代表 1~12月
 			for(i = nowMonth;i <= 11;i++){
@@ -1566,9 +1566,9 @@ function initCount(kssj, jssj) {
 		}
 		    // 初始化弹框里的数据，数据格式请严格按照示例
 	    Popup_tqjsfx.setData({
-	
+
 	        area: ["浦东", "市区", "市北", "市南", "嘉定", "松江", "青浦", "奉贤", "金山", "崇明", "长兴"],
-	
+
 	        tqzzhb: {
 	            curMonth: {
 	                data: zzCurData,
@@ -1633,11 +1633,11 @@ function initCount(kssj, jssj) {
 	            curYear: sxbphCurData,
 	            lastYear: sxbphLastData
 	        }
-	
-	
+
+
 	    });
 
-		
+
     }
 
 

@@ -105,7 +105,7 @@ function gzjc_r() {
 	liquidFill.setOption(option);
 	gzjc_data(liquidFill, option)
 	liquidFill.on("click", function clickEchart(param) {
-		debugger
+
 		if(param.componentType !== "series") {
 			return;
 		}
@@ -174,7 +174,7 @@ function gzjc_data(qualified, option) {
 		type: 'get',
 		dataType: 'json',
 		success: function(data) {
-			debugger
+
 			var nums = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //已处理:YWC
 			var numz = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //处理中:JXZ+WDD
 			var data = data.data;
@@ -208,12 +208,12 @@ function gzjc_data(qualified, option) {
 							nums[4] += data[i].YWC;
 							numz[4] += (data[i].JXZ + data[i].WDD);
 							break;
-						case 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP0A': //松江 
+						case 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP0A': //松江
 							//  					nums[6] += data[i].SL;
 							nums[5] += data[i].YWC;
 							numz[5] += (data[i].JXZ + data[i].WDD);
 							break;
-						case 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP09': //青浦 
+						case 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP09': //青浦
 							//  					nums[7] += data[i].SL;
 							nums[6] += data[i].YWC;
 							numz[6] += (data[i].JXZ + data[i].WDD);
@@ -262,7 +262,7 @@ function gzjc_data(qualified, option) {
 
 //台风告警
 function right_tfgj(data) {
-	debugger
+
 	var data = data.data;
 	for(var i = 0; i < data.length; i++) {
 		if(data[i].MAXGRADE == "1") {
@@ -279,7 +279,7 @@ function right_tfgj(data) {
 getYjgjTaifeng(right_tfgj)
 ////雷电告警
 //function right_ldgj(data) {
-//	debugger
+//
 //	var data = data.data;
 //	for(var i = 0; i < data.length; i++) {
 //		if(data[i].predictLevel == "1") {
@@ -298,7 +298,7 @@ getYjgjTaifeng(right_tfgj)
 
 //防汛告警
 //function right_fxgj(data) {
-//	debugger
+//
 //	var num = 0;
 //	if(data.data) {
 //		for(var i = 0; i < data.data.length; i++) {
@@ -313,7 +313,7 @@ function right_fxwz(data) {
 	var num2 =0;
 	var data = data.data;
 	for(var i = 0; i < data.length; i++){
-		debugger
+
 		if(data[i].WZDLX=="防汛") {
 			if(data[i].CKLXMC=="应急库"){
 				num1 += Number(data[i].SL)
@@ -322,14 +322,14 @@ function right_fxwz(data) {
 			}
 		}
 	}
-	$("#Yinji_fx").text(num1)	
+	$("#Yinji_fx").text(num1)
 	$("#ChangBei_fx").text(num2)
 }
 getFangXunWuZi(right_fxwz)
 
 
 function right_fxdw(data) {
-	debugger
+
 	var num1=0;
 	var num2 =0;
 	var num3 = 0;
@@ -349,7 +349,7 @@ function right_fxdw(data) {
 			}
 		}
 	}
-	$(".duiwu").text(num2)	
+	$(".duiwu").text(num2)
 	$(".renyuan").text(num1)
 	$(".cheliang").text(num3)
 }

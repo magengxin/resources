@@ -306,7 +306,7 @@ function bindClick_WZJK() {
 
 	//应急 常备 变电 线路的点击
 	Object.keys(CangKu2ZYHtmlLabelMap).forEach(function(name) {
-		debugger
+
 		var ckobj = CangKu2ZYHtmlLabelMap[name];
 		$("#" + ckobj.wzdlxli).find("h4").click(function() {
 			var text = $(this).text();
@@ -684,7 +684,7 @@ function dealKuaDanWei(ssgs) {
 //物资管理
 //仓库内设备统计
 function dealCangKuWuZi(CKLX, WZDLXDM, ID, ssgs) {
-	debugger
+
 	//	$('#wzActive').html()
 	getCangKuWuZiCount(dealdata, CKLX, WZDLXDM, ID, ssgs);
 	var resultset = {};
@@ -811,7 +811,7 @@ function showCangKuWuZiListByWZZLX(CKLX, ID, WZZLX, WZDLXDM, ssgs) {
 
 //仓库数量及仓库列表
 function dealCangKuCount(CKLX, ssgs) {
-	debugger
+
 	$("#" + CangKu2ZYHtmlLabelMap[CKLX].num).text(0);
 
 	var ul = CangKu2ZYHtmlLabelMap[CKLX].ul;
@@ -917,7 +917,7 @@ function dealCangKuCount(CKLX, ssgs) {
 			//			}else{
 			//				ind = ind - 1;
 			//			}
-			//			
+			//
 			//			$("#FourUl_add").empty();
 			//			var th0 = $("<th>",{style : "width:50px;height: 70px;line-height: 70px;color: #3c7eaf;font-size: 24px;font-weight: normal;",});
 			//			$("#FourUl_add").append(th0);
@@ -931,7 +931,7 @@ function dealCangKuCount(CKLX, ssgs) {
 			//				style : "width:375px;height: 70px;line-height: 70px;color: #3c7eaf;font-size: 24px;font-weight: normal;",
 			//				});
 			//			$("#FourUl_add").append(th0);
-			//			
+			//
 			//			$("#FourUl table").empty();
 			//			var tr = $("<tr>",{});
 			//			var img = $("<img>", {
@@ -957,15 +957,15 @@ function dealCangKuCount(CKLX, ssgs) {
 			//			});
 			//			tr.append(td0);
 			//			tr.append('<td style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden;width:375px;height: 60px;line-height: 60px;padding:0 10px;font-size: 24px;"><img class="alert_box_show" src="'+basepath+'ws_static/img/no_img.png" alt="" style="cursor:pointer"></td>');
-			//			
+			//
 			//			$("#FourUl table").append(tr);
-			//			
+			//
 			//			$('#showImgDiv .slideBox').addClass('hide');
 			//			$('#showImgDiv .slideBox').eq(ind).removeClass('hide');
-			//			
+			//
 			//			$('.alert_box_show').bind('click', function () {
 			//				$('#showImgBigDiv').removeClass('hide');
-			//				
+			//
 			//			})
 
 		});
@@ -980,7 +980,7 @@ function dealSupplierList() {
 		type: 'get',
 		dataType: 'json',
 		success: function(data) {
-			debugger
+
 			var row = data.data;
 			var num = 0;
 			if(data.data) {
@@ -1044,8 +1044,8 @@ function supplierWuZiShow(id, lx) {
 }
 
 /**
- * 
- * 
+ *
+ *
  */
 function showSupplierWuZiCeList(id, lx) {
 
@@ -1122,8 +1122,8 @@ function getSupplierShow() {
 }
 
 /**
- * 
- * 
+ *
+ *
  */
 function showSupplierCeList() {
 

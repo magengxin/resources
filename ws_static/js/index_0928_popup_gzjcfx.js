@@ -26,7 +26,7 @@ var Popup_gzjsfx = (function () {
     var data = {};
 
     function update() {
-    	debugger
+
 	var a = data.tzcs.lastYear
         // 跳闸环比
         var option_tzhb = {
@@ -312,7 +312,7 @@ var Popup_gzjsfx = (function () {
                 },
                 selectedMode: false
             },
-            
+
             grid: {
                 left: 20,
                 top: 120,
@@ -605,7 +605,7 @@ var Popup_gzjsfx = (function () {
                 show: true,
                 trigger: 'axis',
                 padding: 10
-                
+
             },
             legend: {
                 right: 20,
@@ -684,7 +684,7 @@ var Popup_gzjsfx = (function () {
                     name: "当年",
                     symbol: "circle",
                     symbolSize: 10,
-                    
+
                     label: {
                     	normal: {
                     		show: true,
@@ -700,8 +700,8 @@ var Popup_gzjsfx = (function () {
                     		}
                     	}
                     },
-                    
-                    
+
+
                     itemStyle: {
                         color: "#12b4ff"
                     },
@@ -785,8 +785,8 @@ var Popup_gzjsfx = (function () {
                     // areaStyle: {
                     //     opacity: 0.1
                     // },
-                    
-                    
+
+
                 },
                 {
                     type: "line",
@@ -1002,7 +1002,7 @@ var Popup_gzjsfx = (function () {
 	                        color: "#12b4ff"
 	                    },
                         smooth: false,
-                        
+
                         data: (function () {
 //                      	var onemonth = new Date().getMonth();
 //                      	if(onemonth==0){
@@ -1011,8 +1011,8 @@ var Popup_gzjsfx = (function () {
 //	                    	data.tzl['当年'].length = onemonth;
 	                    	return data.tzl['当年']
 	                    })()
-                        
-                    
+
+
                 },
                 {
                     type: "line",
@@ -1041,11 +1041,11 @@ var Popup_gzjsfx = (function () {
 	                    },
                         smooth: false,
                         data: data.tzl['上年']
-                    
+
                 }
-                
+
             ]
-            
+
 //          (function () {
 //              var arr = [];
 //              var color = {
@@ -1060,7 +1060,7 @@ var Popup_gzjsfx = (function () {
 //              };
 //              for (var key in data.tzl) {
 //                  arr.push({
-//                  	
+//
 //                      type: "line",
 //                      name: key,
 //                      symbol: "circle",
@@ -1070,9 +1070,9 @@ var Popup_gzjsfx = (function () {
 //	                    		show: true,
 //	                    		position: 'top',
 //	                    		formatter: function (params) {
-//	                    			
+//
 ////	                    			console.log('李云素' + this.data)
-//	                    			
+//
 //	                    		}
 //	                    	}
 //	                    },
@@ -1088,20 +1088,20 @@ var Popup_gzjsfx = (function () {
 ////									}else{
 ////										return data.tzl[key]
 ////									}
-//									
+//
 ////									alert(data.tzl[key])
-//									
-//									
+//
+//
 ////									alert('我是key啊aaaaaaa a啊' + key);
 //		                    		return data.tzl[key]
 //		                    	})()
-//                      
+//
 //                  })
 //              }
 //              console.log('我是arr啊' + arr);
 //              return arr
 //          })()
-            
+
         };
         chart_tzl.setOption(option_tzl,true);
 
@@ -1126,14 +1126,14 @@ var Popup_gzjsfx = (function () {
 										return '';
 									}
 	                    		}
-	                    		
+
 	                    	}
 	                    },
                         itemStyle: {
 	                        color: "#12b4ff"
 	                    },
                         smooth: false,
-                        
+
                         data: (function () {
 //                      	var onemonth = new Date().getMonth();
 //                      	if(onemonth==0){
@@ -1142,9 +1142,9 @@ var Popup_gzjsfx = (function () {
 //	                    	data.tyl['当年'].length = onemonth;
 	                    	return data.tyl['当年']
 	                    })()
-                        
+
                 },
-                
+
                 {
                     type: "line",
                         name: '上年',
@@ -1165,7 +1165,7 @@ var Popup_gzjsfx = (function () {
 									return '';
 								}
 	                    		}
-	                    		
+
 	                    	}
 	                    },
                         itemStyle: {
@@ -1173,11 +1173,11 @@ var Popup_gzjsfx = (function () {
 	                    },
                         smooth: false,
                         data: data.tyl['上年']
-                    
+
                 }
-  
+
             ]
-     	
+
 //          series: (function () {
 //              var arr = [];
 //              var color = {
@@ -1216,8 +1216,8 @@ var Popup_gzjsfx = (function () {
 
         });
         chart_tyl.setOption(option_tyl,true);
-         
-         
+
+
         // 影响用户
         var option_yxyh = {
         	title: [
@@ -1286,7 +1286,7 @@ var Popup_gzjsfx = (function () {
     }
 
     function setData(newdata, isMarge) {
-    	
+
         if (!newdata) return;
         var isEmpty = true;
         for (var t in data) {
@@ -1301,7 +1301,7 @@ var Popup_gzjsfx = (function () {
         } else {
             f(newdata, data);
         }
-        
+
         update();
     }
 

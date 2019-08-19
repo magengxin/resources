@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
-	
-	
+
+
 	//初始化弹框里的数据，数据格式请严格按照示例
 Popup_tqjsfx.setData({
 
@@ -74,7 +74,7 @@ Popup_tqjsfx.setData({
     }
 });
 
-	
+
 });
 /**
  * 点击配网运行导航切换按钮
@@ -91,8 +91,8 @@ function clickPWYX() {
 }
 /**
  * 全网运行
- * 下 
- * 配网运行 
+ * 下
+ * 配网运行
  * 之
  * 台区监测:
  * 台区总数 与 监测率
@@ -828,7 +828,7 @@ function getYiChangFenBu(yclx) {
  * 全网运行监控统计-配网运行-台区监测
  */
 function getPeiWangYunXingData(companyId, yclx) {
-	debugger
+
 	// alert(companyId);
 	var sfhxq = companyId === "JBH-HXQ" ? "1" : "0";
 	// var dataParam = {"SSGS": companyId, "KSSJ": KSSJ_NOW_YYYYMMDD, "JSSJ": JSSJ_NOW_YYYYMMDD,  "YCLX":yclx, "SFHXQ" : sfhxq};
@@ -1174,15 +1174,15 @@ function yichangjiankongload1(gbnum1, pbnum1,maxNum) {
 	// getZhiHuiBaodianData(power_monitor_2,option,1);
 }
 /**
- * 全网运行 
- * 下 
+ * 全网运行
+ * 下
  * 配网运行
  * 之
  * 台区监测:
  * 过载 饼图
  */
 function tqjcOverload() {
-	
+
 	var zhanWeiFu = 0;
 	if ( arguments[1] === 0 && arguments[2] === 0 && arguments[3] === 0 ) {
 		zhanWeiFu = 1;
@@ -1204,7 +1204,7 @@ function tqjcOverload() {
 			//formatter: "{b} : {d}%" //提示框浮层内容格式器
 			formatter: function (params){
 				if(params.name=="占位符" ){
-					return '';	
+					return '';
 				}
 				return params.name+": "+params.value;
 			}
@@ -1285,7 +1285,7 @@ function tqjcOverload() {
 	};
 
 	var power_monitor_2 = echarts.init(document.getElementById('tqjc-guozai'));
-	
+
 	var num;
 	var TDZS = $('#taiqu_tqzs').html();
 //	console.log(TDZS)
@@ -1297,7 +1297,7 @@ function tqjcOverload() {
 			$('#guozai-bi').html(num)
 		}
 
-	
+
 	power_monitor_2.setOption(option);
 	// getZhiHuiBaodianData(power_monitor_2,option,1);
 	power_monitor_2.on("click",function clickEchart(param) {
@@ -1332,8 +1332,8 @@ $('#gdfw').click(function(){
 //      });
 //tqjc-chongzai
 /**
- * 全网运行 
- * 下 
+ * 全网运行
+ * 下
  * 配网运行
  * 之
  * 台区监测:
@@ -1361,13 +1361,13 @@ function tqjcChongzai() {
 			//formatter: "{b} : {d}%" //提示框浮层内容格式器
 			formatter: function (params){
 				if(params.name=="占位符" ){
-					return '';	
+					return '';
 				}
 				return params.name+": "+params.value;
 			}
 		},
 		color: ['rgb(27, 207, 227)', 'rgb(30, 132, 199)', 'rgba(188, 188, 188, 0.1)'],
-		
+
 		// color:['rgb(30, 132, 199)','rgb(27, 207, 227)','rgba(188, 188, 188, 0.1)'],  //手动设置每个图例的颜色
 		animation: false,
 
@@ -1454,7 +1454,7 @@ function tqjcChongzai() {
 			$('#chongzai-bi').html(num)
 		}
 
-	
+
 	// getZhiHuiBaodianData(power_monitor_2,option,1);
 	power_monitor_2.on("click",function clickEchart(param) {
 			getYiChangFenBu('ZZ');
@@ -1465,8 +1465,8 @@ function tqjcChongzai() {
 });
 }
 /**
- * 全网运行 
- * 下 
+ * 全网运行
+ * 下
  * 配网运行
  * 之
  * 台区监测:
@@ -1494,7 +1494,7 @@ function tqjcDidianya() {
 			//formatter: "{b} : {d}%" //提示框浮层内容格式器
 			formatter: function (params){
 				if(params.name=="占位符" ){
-					return '';	
+					return '';
 				}
 				return params.name+": "+params.value;
 			}
@@ -1586,7 +1586,7 @@ function tqjcDidianya() {
 			$('#didianya-bi').html(num)
 		}
 
-	
+
 	// getZhiHuiBaodianData(power_monitor_2,option,1);
 	power_monitor_2.on("click",function clickEchart(param) {
 			getYiChangFenBu('DDY')
@@ -1598,15 +1598,15 @@ function tqjcDidianya() {
 });
 }
 /**
- * 全网运行 
- * 下 
+ * 全网运行
+ * 下
  * 配网运行
  * 之
  * 台区监测:
  * 三相不平衡 饼图
  */
 function tqjcBupingheng() {
-	
+
 	var zhanWeiFu = 0;
 	if ( arguments[1] === 0 && arguments[2] === 0 && arguments[3] ===0 ) {
 		zhanWeiFu = 1;
@@ -1628,7 +1628,7 @@ function tqjcBupingheng() {
 			//formatter: "{b} : {d}%" //提示框浮层内容格式器
 			formatter: function (params){
 				if(params.name=="占位符" ){
-					return '';	
+					return '';
 				}
 				return params.name+": "+params.value;
 			}
@@ -1718,10 +1718,10 @@ function tqjcBupingheng() {
 		}else{
 			num = '暂无数据'
 			$('#bupingheng-bi').html(num)
-			
+
 		}
 
-	
+
 	// getZhiHuiBaodianData(power_monitor_2,option,1);
 	power_monitor_2.on("click",function clickEchart(param) {
 			getYiChangFenBu('SXBPH')
@@ -1741,7 +1741,7 @@ function tqjcBupingheng() {
             peiwangShow("GZ");//显示台区监测明细列表与塞数据
             $('#qiangdan_title').text("异常监测");//明细列表标题
     });
-    
+
 $("#tqjc-chongzai").css({'cursor': 'pointer'});
     $("#tqjc-chongzai").click(function () {
        getYiChangFenBu('ZZ');
@@ -1760,8 +1760,8 @@ $("#tqjc-didianya").css({'cursor': 'pointer'});
             peiwangShow("DDY");//显示台区监测明细列表与塞数据
             $('#qiangdan_title').text("异常监测");
     });
-    
-    
+
+
 $("#tqjc-bupingheng").css({'cursor': 'pointer'});
     $("#tqjc-bupingheng").click(function () {
        getYiChangFenBu('SXBPH')

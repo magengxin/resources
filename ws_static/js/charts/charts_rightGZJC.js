@@ -8,10 +8,10 @@ $(document).ready(function () {
     //在点击 全网状态 下 故障监测 时以上方法会被调用来显示实时数据
 });
 /**
- * 全网状态 
- * 下 
- * 故障监测 
- * 之 
+ * 全网状态
+ * 下
+ * 故障监测
+ * 之
  * 实时监测:
  * 110kV及以上饼图
  */
@@ -36,7 +36,7 @@ function chart_110kv_pie() {
 //          formatter: "{b} : {d}%" //提示框浮层内容格式器
 			formatter: function (params){
 				if(params.name=="占位符" ){
-					return '';	
+					return '';
 				}
 				return params.name+": "+params.percent+"%";
 			}
@@ -91,14 +91,14 @@ function chart_110kv_pie() {
         ]
     };
     echarts.init(document.getElementById('chart_110kv_pie')).setOption(option);
-    
-  
+
+
 }
 /**
- * 全网状态 
- * 下 
- * 故障监测 
- * 之 
+ * 全网状态
+ * 下
+ * 故障监测
+ * 之
  * 实时监测:
  * 35kV及以上饼图
  */
@@ -123,7 +123,7 @@ function chart_35kv_pie() {
 //          formatter: "{b} : {d}%" //提示框浮层内容格式器
 			formatter: function (params){
 				if(params.name=="占位符" ){
-					return '';	
+					return '';
 				}
 				return params.name+": "+params.percent+"%";
 			}
@@ -180,10 +180,10 @@ function chart_35kv_pie() {
     echarts.init(document.getElementById('chart_35kv_pie')).setOption(option);
 }
 /**
- * 全网状态 
- * 下 
- * 故障监测 
- * 之 
+ * 全网状态
+ * 下
+ * 故障监测
+ * 之
  * 实时监测:
  * 10kV及以上饼图
  */
@@ -207,7 +207,7 @@ function chart_10kv_pie() {
             formatter: "{b} : {d}%" //提示框浮层内容格式器
         },
         color: ['#0069c7', '#13a7e4', '#15e9d8', '#6ae0f3','rgba(188, 188, 188, 0.1)'],  //手动设置每个图例的颜色
-        
+
         series: [ //系列列表
             {
                 name: '设备状态',  //系列名称
@@ -257,10 +257,10 @@ function chart_10kv_pie() {
     echarts.init(document.getElementById('chart_10kv_pie')).setOption(option);
 }
 /**
- * 全网状态 
- * 下 
- * 故障监测 
- * 之 
+ * 全网状态
+ * 下
+ * 故障监测
+ * 之
  * 实时监测:
  * 0.4kV及以上饼图
  */
@@ -284,7 +284,7 @@ function chart_04kv_pie() {
             formatter: "{b} : {d}%" //提示框浮层内容格式器
         },
         color: ['#0069c7', '#13a7e4', '#15e9d8', '#6ae0f3','rgba(188, 188, 188, 0.1)'],  //手动设置每个图例的颜色
-        
+
         series: [ //系列列表
             {
                 name: '设备状态',  //系列名称
@@ -334,10 +334,10 @@ function chart_04kv_pie() {
     echarts.init(document.getElementById('chart_04kv_pie')).setOption(option);
 }
 /**
- * 全网状态 
- * 下 
- * 故障监测 
- * 之 
+ * 全网状态
+ * 下
+ * 故障监测
+ * 之
  * 故障分布条形图
  */
 function chart_gzfb_bar() {
@@ -349,7 +349,7 @@ function chart_gzfb_bar() {
                 type: 'shadow'
             }
         },
-        
+
         grid: {
             left: '3%',
             right: '4%',
@@ -422,7 +422,7 @@ function chart_gzfb_bar() {
                     fontSize:20
                 }
             },
-      		
+
         },
         {
             name: '处理中',
@@ -447,7 +447,7 @@ function chart_gzfb_bar() {
     echarts.init(document.getElementById('chart_gzfb_bar')).setOption(option);
     //点击显示故障分布明细列表与塞数据
    echarts.init(document.getElementById('chart_gzfb_bar')).on("click",function clickEchart(param) {
-   	debugger
+
    	        if (param.componentType !== "series"){
 		        return;
 		    }
@@ -502,5 +502,5 @@ function chart_gzfb_bar() {
             showFaultJianCeList(areaId,"08,22,25,32",sfhxq);
             $('#qiangdan_title').text("故障监测");//明细列表标题
   });
-    
+
 }

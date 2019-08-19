@@ -4,11 +4,11 @@
  */
 function clickGDFW() {
 	bindGongDianFuwuData("8a812897493378a00149567740676661");//默认加载上海的数据
-	
+
 	bindQiangxiufenbuData();//加载抢修分布图表数据
 
 	bindJinjisuqiuData();//加载紧急诉求-实时监测饼状图表数据
-	
+
 	bindJinjisuqiuZhuZhuangTuData();// 绑定紧急诉求-诉求分布的柱状图数据
 }
 
@@ -29,7 +29,7 @@ function clickTanChu() {
 }
 
 /**
- * 
+ *
  * 点击右侧切换地域时会触发该函数
  * @param {Object} area
  */
@@ -47,7 +47,7 @@ var gongsi = '8a812897493378a00149567740676661'; //默认上海公司
  * 点击配网抢修分析弹框上面的地区切换
  */
 function gzjc_pwqx(area) {
-	debugger;
+
 	gongsi = SSGSMAP_NAME[area];
 	if(area != '上海') {
 		$("#fenbutongji4").hide();//只有上海公司有趋势分析,非上海公司没有
@@ -75,7 +75,7 @@ function gzjc_pwqx(area) {
  * @param {Object} o
  */
 function changeDatePwfx(o) {
-	debugger
+
 	var m = $("#l_pop_pwqx_m").attr("data-month");
 	var month = new Date().getMonth();
 	var year = moment().format("YYYY");
@@ -99,8 +99,8 @@ function changeDatePwfx(o) {
     }else{
     	var lastMon=year-1+'0'+tm;
     }
-    
-	
+
+
 //	var el = $(o).siblings('.m');
 //	var m = el.attr("data-month");
 //	var lm = Number(m) - 1;
@@ -124,7 +124,7 @@ function changeDatePwfx(o) {
 //	} else {
 //		var last_mon = '' + lm;
 //	}
-//	
+//
 //	kssj = '2019' + last_mon;
 //	jssj = '2019' + mon;
 //	if(m==1){
@@ -306,7 +306,7 @@ function bindGongDianFuWu_QZQXHB(kssj, jssj) {
 		lastMontArr[9] = jinShan1;
 		lastMontArr[10] = chongMing1;
 		lastMontArr[11] = changXing1;
-        
+
 		Popup_pwqxfx.setData({ ////给分布统计-平均到达时间环比图表赋值
 			gzqxhb: { //分布统计-故障抢修环比
 				'当月欠费复电': thisMonthArr,
@@ -656,7 +656,7 @@ function bindGongDianFuWu_QZQXHB(kssj, jssj) {
 	}
 
 	var tmp_ssgs = '-1';
-	BDZT_GETQWYXJKTJ_GDFW(dealData1, tmp_ssgs, kssj, jssj, 6); //1 用户报修 6欠费付电(欠费停电) 
+	BDZT_GETQWYXJKTJ_GDFW(dealData1, tmp_ssgs, kssj, jssj, 6); //1 用户报修 6欠费付电(欠费停电)
 	BDZT_GETQWYXJKTJ_GDFW(dealData2, tmp_ssgs, kssj, jssj, 2); //电力故障
 	BDZT_GETQWYXJKTJ_GDFW(dealData3, tmp_ssgs, kssj, jssj, 3); //非电力故障
 }
@@ -666,7 +666,7 @@ function bindGongDianFuWu_QZQXHB(kssj, jssj) {
  * @param {Object} SSGS
  * @param {Object} year
  */
-function bindGongDianFuWu_QuShiFenXi(SSGS, year) { 
+function bindGongDianFuWu_QuShiFenXi(SSGS, year) {
 
 	function dealDataYHBX1_12(res) { //用户报修1-12月回调
 		if(!res.data) {
@@ -767,8 +767,8 @@ function bindGongDianFuWu_QuShiFenXi(SSGS, year) {
 				m[i] = null;//当前月份到12月值确定没有值，给他们赋值为null则在统计图形上不会被连线
 			}
 		}
-		
-		
+
+
 		Popup_pwqxfx.setData({ //趋势分析-用户报修-当年
 			yhbx: {
 				curYear: m,
@@ -978,7 +978,7 @@ function bindGongDianFuWu_QuShiFenXi(SSGS, year) {
 				m[i] = null;//当前月份到12月值确定没有值，给他们赋值为null则在统计图形上不会被连线
 			}
 		}
-		
+
 
 		Popup_pwqxfx.setData({ //趋势分析-用户报修-当年
 			fdlgz: {
@@ -996,7 +996,7 @@ function bindGongDianFuWu_QuShiFenXi(SSGS, year) {
 	var pjddsjLastYear = [];
 
 
-	function dealDataPJDDSJ1_12(res) { //平均到达时间当年上年1-12月回调 
+	function dealDataPJDDSJ1_12(res) { //平均到达时间当年上年1-12月回调
 
 		if(!res.data) {
 			res.data = [];
@@ -1170,19 +1170,19 @@ function bindGongDianFuWu_QuShiFenXi(SSGS, year) {
 						break;
 				}
 			}
-			
+
         var nowMonth = new Date().getMonth();//获取当前月份:0-11 代表 1~12月
         if(nowMonth==0){
 				nowMonth = 12;
 			}
         if(year=='2019'){
-        	
+
         	for(i = nowMonth;i <= 11;i++){
 				m[i] = null;//当前月份到12月值确定没有值，给他们赋值为null则在统计图形上不会被连线
 			}
         }
-		
-		
+
+
 			Popup_pwqxfx.setData({ //趋势分析-平均到达时间
 				pjddsj: {
 					"当年": pjddsjThisYear,
@@ -1203,7 +1203,7 @@ function bindGongDianFuWu_QuShiFenXi(SSGS, year) {
 				m[i] = null;//当前月份到12月值确定没有值，给他们赋值为null则在统计图形上不会被连线
 			}
 		}
-         
+
 		if(SSGS == '8a812897493378a00149567740676661') {
 			Popup_pwqxfx.setData({ //趋势分析-平均到达时间
 				pjddsj: {
@@ -1400,7 +1400,7 @@ function bindGongDianFuWu_QuShiFenXi(SSGS, year) {
 				m[i] = null;//当前月份到12月值确定没有值，给他们赋值为null则在统计图形上不会被连线
 			}
 		}
-        
+
 			Popup_pwqxfx.setData({ ////趋势分析-平均修复时间
 				pjxfsj: {
 					"当年": pjxfsjThisYear,
@@ -1419,7 +1419,7 @@ function bindGongDianFuWu_QuShiFenXi(SSGS, year) {
 				m[i] = null;//当前月份到12月值确定没有值，给他们赋值为null则在统计图形上不会被连线
 			}
 		}
-        
+
 		if(SSGS == '8a812897493378a00149567740676661') {
 			Popup_pwqxfx.setData({ //趋势分析-平均修复时间
 				pjxfsj: {
@@ -1793,19 +1793,19 @@ function bindGongDianFuwuData(SSGS) {
 		var valDLGZ12345 = 0; //12345电力故障总数
 		var valFDLGZ12345 = 0; //13245非电力故障总数
 
-		var valDLGZ95598 = 0; //95598电力故障总数		
+		var valDLGZ95598 = 0; //95598电力故障总数
 		var valFDLGZ95598 = 0; //95598非电力故障总数
 
 		var valDLGZYiChuli95598 = 0; //95598电力故障总数已处理
-		var valDLGZWeiChuli95598 = 0; //95598电力故障总数未处理		
+		var valDLGZWeiChuli95598 = 0; //95598电力故障总数未处理
 
 		var valFDLGZYiChuli95598 = 0; //95598非电力故障总数已处理
 		var valFDLGZWeiChuli95598 = 0; //95598非电力故障总数未处理
 
-		var valDLGZYiChuli12345 = 0; //13245电力故障总数已处理		
+		var valDLGZYiChuli12345 = 0; //13245电力故障总数已处理
 		var valDLGZWeiChuli12345 = 0; //12345电力故障总数未处理
 
-		var valFDLGZYiChuli12345 = 0; //13245非电力故障总数已处理		
+		var valFDLGZYiChuli12345 = 0; //13245非电力故障总数已处理
 		var valFDLGZWeiChuli12345 = 0; //12345非电力故障总数未处理
 
 		var pjddsj = 0;
@@ -1869,16 +1869,16 @@ function bindGongDianFuwuData(SSGS) {
 }
 
 /*
- 
+
  * 配网抢修实时监测-----用户报修
- * 
- * 
+ *
+ *
  * */
 function yongHu(val1,val2){
 	 var count = val1-val2>0?val1:val2
 	 var yonghu = {
         series: [
-        	{	
+        	{
         		type:'pie',
         		radius:['70%','80%'],
         		label:{
@@ -1909,15 +1909,15 @@ function yongHu(val1,val2){
 							color:'#082f45'
 						},
         			},
-        			
+
         		]
         	}
         ],
        }
 	 var yonghubaoxiutu = echarts.init(document.getElementById('yonghu'));
- 	 yonghubaoxiutu.setOption(yonghu); 
- }   
-	
+ 	 yonghubaoxiutu.setOption(yonghu);
+ }
+
 
 
 
@@ -2121,7 +2121,7 @@ function bindQiangxiufenbuData() {
 //			$('#' + objId + 'Val').attr('data-fdlgz', f); //data-fdlgz
 
 		}
-		
+
 	function setQiangXiuFenBuZhuZhuangTu1(objId, d, f) {
 			if((d + f) > 0) {
 				var tmpDRatio = d * 100 / (d + f + 50);
@@ -2153,7 +2153,7 @@ function bindQiangxiufenbuData() {
 		setQiangXiuFenBuZhuZhuangTu('chongMing', chongMing, chongMing1);
 		setQiangXiuFenBuZhuZhuangTu('changXing', changXing, changXing1);
 		setQiangXiuFenBuZhuZhuangTu('heXinQu', heXinQu, heXinQu1);
-		
+
 		setQiangXiuFenBuZhuZhuangTu1('shiQu', shiQu2, shiQu3);
 		setQiangXiuFenBuZhuZhuangTu1('shiBei', shiBei2, shiBei3);
 		setQiangXiuFenBuZhuZhuangTu1('shiNan', shiNan2, shiNan3);

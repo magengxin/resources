@@ -50,7 +50,7 @@ function rNavMain(o){
 }
 //左侧一级切换 音效
 $(function(){
-	
+
 	$(".chosen_tit").click(function(){
 		var audio_rightMainNav = new Audio();
 		audio_rightMainNav.src = basepath+"/ws_static/audio/rightMainNav.wav";
@@ -62,7 +62,7 @@ $(function(){
 })
 // 中间弹框，日期月份切换
 function popup_comp_timeSelect(o, type) {
-	debugger
+
     var el = $(o).siblings('.m');
     var m = + el.attr("data-month");
     console.log(m);

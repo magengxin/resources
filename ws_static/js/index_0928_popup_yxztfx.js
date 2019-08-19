@@ -13,7 +13,7 @@ $(document).ready(function(){
     	chart_tdyy2:{gzTdyy:[]},//停电原因故障
     	chart_tdyy3:{yapTdyy:[]},//趋势分析图-停电原因预安排
     	chart_tdyy4:{gzTdyy:[]}//趋势分析图-停电原因故障
-   }) 
+   })
 })
 
 /**
@@ -21,7 +21,7 @@ $(document).ready(function(){
  */
 
 function yxztfx_dwkkx_init() {
-	debugger
+
 	setTimeout(function(){
 	    $('.popup-normal__areaSelect').find('input')[0].click();
 	},1000);
@@ -75,7 +75,7 @@ function zhuanti_fx(dateKs,dateJs){
 	        			arrShs1[i]=shs1;
         			}
         		}
-        		
+
         	}
             Popup_yxztfx.setData({
 		    	chart_tdsjfx: {arrShs:arrShs,arrShs1:arrShs1},// 时户停电
@@ -195,7 +195,7 @@ function dw_qsfx_popup(dateKs,dateJs) {
         type:'get',
         dataType: 'json',
         success: function (data) {
-        	debugger
+
             if(data.result_code==0 && data.data!=null){
             	var res = data.data;
             	console.log(res);
@@ -241,7 +241,7 @@ function dw_qsfx_popup(dateKs,dateJs) {
             	console.log(res);
             	for(var i=0;i<res.length;i++){
         			if(res[i].TJLX == "1") {//预安排
-						switch(res[i].LX) {	
+						switch(res[i].LX) {
 							case '1': //
 								YapTdyy[0] = Number(res[i].VALUE);
 								break;
@@ -270,7 +270,7 @@ function dw_qsfx_popup(dateKs,dateJs) {
 								break;
 						}
 					} else if(res[i].TJLX == "2"){ //故障
-						switch(res[i].LX) {	
+						switch(res[i].LX) {
 							case '1': //
 								GzTdyy[0] = Number(res[i].VALUE);
 								break;
@@ -295,7 +295,7 @@ function dw_qsfx_popup(dateKs,dateJs) {
 							default:
 								break;
 						}
-					}   
+					}
 		        }
             	var YapAdd1 = (YapTdyy[0] + YapTdyy[1] + YapTdyy[2] + YapTdyy[3] + YapTdyy[4] + YapTdyy[5] + YapTdyy[6] + YapTdyy[7]).toFixed(3);
             	var GzAdd1 = (GzTdyy[0]+GzTdyy[1]+GzTdyy[2]+GzTdyy[3]+GzTdyy[4]+GzTdyy[5]+GzTdyy[6]).toFixed(3);
@@ -323,7 +323,7 @@ function dw_qsfx_popup(dateKs,dateJs) {
 					}
 				});
             }
-            
+
         },
         error: function (data) {
             console.log(data);
@@ -337,7 +337,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 	var QnheXinQu=QnpuDong=QnshiQu=QnjiaDing=QnshiBei=QnshiNan=QnsongJiang=QnqingPu=QnfengXian=QnjinShan=QnchongMing=QnchangXing=0;//"全年"
 	var HyheXinQu=HypuDong=HyshiQu=HyshiBei=HyshiNan=HyjiaDing=HysongJiang=HyqingPu=HyfengXian=HyjinShan=HychongMing=HychangXing=0;//"已耗用量"
 	var YapheXinQu=YappuDong=YapshiQu=YapshiBei=YapshiNan=YapjiaDing=YapsongJiang=YapqingPu=YapfengXian=YapchongMing=YapjinShan=YapchangXing=0; //"预安排"
-	var GzheXinQu=GzpuDong=GzshiQu=GzshiBei=GzshiNan=GzjiaDing=GzsongJiang=GzqingPu=GzfengXian=GzchongMing=GzjinShan=GzchangXing=0;//"故障"	
+	var GzheXinQu=GzpuDong=GzshiQu=GzshiBei=GzshiNan=GzjiaDing=GzsongJiang=GzqingPu=GzfengXian=GzchongMing=GzjinShan=GzchangXing=0;//"故障"
 	var url = basepath + "interface/BDZT_YB_GETGDKKXZB/0"; //供电可靠性
 	var url1 = basepath + "interface/BDZT_YB_GETZYYHTDHS/0";//中压停电时户数
 	var url2 = basepath + "interface/BDZT_YB_GETSHEDHY/0";//全年时户额度耗用
@@ -367,14 +367,14 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 						}
 					}
             		if(res[i].NY == dateJs) {
-            			debugger
+
 		        		if (Number(res[i].VALUE)<min) {
 		        			min = res[i].VALUE
 		        		}
-						switch(res[i].SSGS) {	
+						switch(res[i].SSGS) {
 							case '8a812897493378a00149567740676661': //
 								shanghai = Number(res[i].VALUE);
-								
+
 								break;
 							case 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFSP03': //
 								shiQu = Number(res[i].VALUE);
@@ -414,7 +414,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 						}
 					}
 		            if(res[i].NY == dateKs) {
-		            	debugger
+
 		        		if (Number(res[i].VALUE)<min) {
 		        			min = res[i].VALUE
 		        		}
@@ -460,7 +460,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 						}
 					}
             	}
-            	
+
             	var thisMonthArr = [], //"当月"
 					lastMontArr = []; ////"上月"
 					minArr=[];
@@ -477,7 +477,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 				thisMonthArr[9] = jinShan;
 				thisMonthArr[10] = chongMing;
 				thisMonthArr[11] = changXing;
-		
+
 				lastMontArr[0] = heXinQu1;
 				//		lastMontArr[0]=200;
 				lastMontArr[1] = puDong1;
@@ -491,7 +491,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 				lastMontArr[9] = jinShan1;
 				lastMontArr[10] = chongMing1;
 				lastMontArr[11] = changXing1;
-		
+
 				Popup_yxztfx.setData({
 					chart_gdkkl: { //分布统计-
 						thismonth: thisMonthArr,
@@ -507,7 +507,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
             console.log(data);
         }
     });
-	
+
 	$.ajax({
         url: url1,
         data: param,
@@ -531,7 +531,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 						}
 					}
             		if(res[i].NY == dateJs) {
-						switch(res[i].SSGS) {	
+						switch(res[i].SSGS) {
 							case '8a812897493378a00149567740676661': //
 								shanghai = Number(res[i].VALUE);
 								break;
@@ -629,7 +629,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 				thisMonthArr[9] = jinShan;
 				thisMonthArr[10] = chongMing;
 				thisMonthArr[11] = changXing;
-		
+
 				lastMontArr[0] = heXinQu1;
 				lastMontArr[1] = puDong1;
 				lastMontArr[2] = shiQu1;
@@ -642,7 +642,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 				lastMontArr[9] = jinShan1;
 				lastMontArr[10] = chongMing1;
 				lastMontArr[11] = changXing1;
-		
+
 				Popup_yxztfx.setData({
 					chart_zytdshs: { //分布统计-
 						thismonth: thisMonthArr,
@@ -650,7 +650,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 					}
 				});
             }
-            debugger;
+
             $("#dytdsh").text(shanghai);
             $("#sntdsh").text(shanghai1);
         },
@@ -658,7 +658,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
             console.log(data);
         }
     });
-	
+
 	$.ajax({
         url: url2,
         data: param,
@@ -666,13 +666,13 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
         dataType: 'json',
         success: function (data) {
             if(data.result_code==0 && data.data!=null){
-            	debugger
+
             	var res = data.data;
             	console.log(res);
             	for(var i=0;i<res.length;i++){
-            		
+
             		if(res[i].NF == moment().format("YYYY").toString()) {
-						switch(res[i].SSGS) {	
+						switch(res[i].SSGS) {
 							case 'JBH-HXQ':
 								QnheXinQu = Number(res[i].VALUE);
 								HyheXinQu = Number(res[i].YHYL);
@@ -749,11 +749,11 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 								break;
 						}
 					}
-		        }    
+		        }
             	var QnMontArr = [], //"全年"
 					HyMontArr = [], //"已耗用量"
 					YapMontArr = [], //"预安排"
-					GzMontArr = [] //"故障"				
+					GzMontArr = [] //"故障"
 				QnMontArr[0] = QnheXinQu;
 				QnMontArr[1] = QnpuDong;
 				QnMontArr[2] = QnshiQu;
@@ -766,7 +766,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 				QnMontArr[9] = QnjinShan;
 				QnMontArr[10] = QnchongMing;
 				QnMontArr[11] = QnchangXing;
-		
+
 				HyMontArr[0] = HyheXinQu;
 				HyMontArr[1] = HypuDong;
 				HyMontArr[2] = HyshiQu;
@@ -779,7 +779,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 				HyMontArr[9] = HyjinShan;
 				HyMontArr[10] = HychongMing;
 				HyMontArr[11] = HychangXing;
-				
+
 				YapMontArr[0] = YapheXinQu;
 				YapMontArr[1] = YappuDong;
 				YapMontArr[2] = YapshiQu;
@@ -792,7 +792,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 				YapMontArr[9] = YapjinShan;
 				YapMontArr[10] = YapchongMing;
 				YapMontArr[11] = YapchangXing;
-				
+
 				GzMontArr[0] = GzheXinQu;
 				GzMontArr[1] = GzpuDong;
 				GzMontArr[2] = GzshiQu;
@@ -805,7 +805,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 				GzMontArr[9] = GzjinShan;
 				GzMontArr[10] = GzchongMing;
 				GzMontArr[11] = GzchangXing;
-		
+
 				Popup_yxztfx.setData({
 					chart_qnshedhy: { //分布统计-
 						Qnmonth: QnMontArr,
@@ -820,7 +820,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
             console.log(data);
         }
     });
-	
+
 	//停电原因
 	$.ajax({
         url: url3,
@@ -836,7 +836,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
             	for(var i=0;i<res.length;i++){
             		if(res[i].NY == dateJs){
             			if(res[i].TJLX == "1") {//预安排
-							switch(res[i].LX) {	
+							switch(res[i].LX) {
 								case '1': //
 									YapTdyy[0] = Number(res[i].VALUE);
 									break;
@@ -865,7 +865,7 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
 									break;
 							}
 						} else if(res[i].TJLX == "2"){ //故障
-							switch(res[i].LX) {	
+							switch(res[i].LX) {
 								case '1': //
 									GzTdyy[0] = Number(res[i].VALUE);
 									break;
@@ -927,12 +927,12 @@ function yxztfx_dwkkx_popup(ssgs,dateKs,dateJs) {//分布统计
             console.log(data);
         }
     });
-	
+
 //  Popup_yxztfx.setData({
 //      chart_gdkkl:{ "截至当月":[],"上年同期":[]},
 //      chart_zytdshs:{"截至当月":[],"上年同期":[]}
 //	});
-	   
+
 }
 
 
@@ -965,7 +965,7 @@ function dw_fbtj(){
     	var thisMon=year+'0'+m;
     }
     tm=Number(m);
-    debugger
+
     if(tm-6<=0){
     	if(tm==0){
     		tm=12
@@ -993,8 +993,8 @@ function dw_fbtj(){
     }else{
     	var lastMon=year-1+'0'+tm;
     }
-    
-    yxztfx_dwkkx_popup('上海',lastMon, thisMon); 
+
+    yxztfx_dwkkx_popup('上海',lastMon, thisMon);
 }
 
 
@@ -1020,7 +1020,7 @@ function yxzt_kkxfx(area) {
         popup_tab_toggle($("#fenbutongji2"),1);
         $("#zhuantifx").show();
         $("input[name = 'radio_gzjcfx_type']").get(1).checked = true;
-        dw_qsfx_popup(moment().add(-1 , "year").format("YYYY"),moment().format("YYYY"));	
+        dw_qsfx_popup(moment().add(-1 , "year").format("YYYY"),moment().format("YYYY"));
     }
     if(area == '上海'){
         $("#fenbutongji2").show();//只有上海公司有分布统计，非上海公司没有分布统计
@@ -1051,22 +1051,22 @@ function changeYear(){
     	chart_tdyy1:{yapTdyy:[0,0,0,0,0,0,0,0]},//停电原因预安排
     	chart_tdyy2:{gzTdyy:[0,0,0,0,0,0,0]},//停电原因故障
 	})
-	debugger
+
 	var year=$("input[name = 'radio_gzjcfx_year']:checked").val();
 	var eara=$("input[name = 'radio_gzjcfx_area']:checked").val();
 //	if( new Date().getFullYear() == year){
-		
+
 		dw_qsfx_popup(year-1,year);
 		dw_fbtj()
-		
+
 //	}else{
 //		var date1 = new Date(year,11,31)
 //		dw_qsfx_popup(eara, moment(year).add(-1 , "year").format("YYYY")+'01',moment(year).format("YYYY")+'12');
-//	}	
+//	}
 }
 
-	
-	
+
+
 
 // 弹框内的图表初始化
 // 弹框：电网可靠性分析
@@ -1225,7 +1225,7 @@ var Popup_yxztfx = (function () {
                     }
                 },
                 axisLine: {
-                	show: false       
+                	show: false
                 },
                 splitLine: {
                     show:false
@@ -1262,7 +1262,7 @@ var Popup_yxztfx = (function () {
             ]
         };
         chart_pjtdsc.setOption(option_pjtdsc);
-    	
+
     	//全口径供电可靠率
     	var option_gdkkl = {
     		tooltip:{},
@@ -1373,7 +1373,7 @@ var Popup_yxztfx = (function () {
                     			}
                     		},
                     		color: "#0060e5",
-                    		
+
                     	}
                     },
                     data:data.chart_gdkkl.thismonth,
@@ -1442,8 +1442,8 @@ var Popup_yxztfx = (function () {
             ]
         };
         chart_gdkkl.setOption(option_gdkkl);
-    	
-    	
+
+
    		//中压停电时户数
    		var option_zytdshs = {
     		tooltip:{},
@@ -1486,7 +1486,7 @@ var Popup_yxztfx = (function () {
                 splitLine: {
                     show:false
                 },
-                
+
             },
             xAxis: {
                 type: 'category',
@@ -1528,7 +1528,7 @@ var Popup_yxztfx = (function () {
                 },
                 {
                     type: 'bar',
-                    name: "上年同期", 
+                    name: "上年同期",
                     itemStyle: {
                     	normal:{
                     		label:{
@@ -1549,7 +1549,7 @@ var Popup_yxztfx = (function () {
             ]
         };
         chart_zytdshs.setOption(option_zytdshs);
-   		
+
    		//全年时户额度耗用
    		var option_qnshedhy = {
     		tooltip: {},
@@ -1559,7 +1559,7 @@ var Popup_yxztfx = (function () {
                 itemGap:60,
     			data: [ {
                     name: "全年额度"
-                }, 
+                },
                 {
                     name: "已耗用量",
                     icon:'roundRect'
@@ -1601,7 +1601,7 @@ var Popup_yxztfx = (function () {
                 splitLine: {
                     show:false
                 },
-                
+
            },
            	{
                 type: 'value',
@@ -1616,7 +1616,7 @@ var Popup_yxztfx = (function () {
                 axisLine: {
                     show:false
                 }
-                
+
            	}
     		],
             xAxis: {
@@ -1637,7 +1637,7 @@ var Popup_yxztfx = (function () {
                 },
             },
             series: [
-                
+
                 {
                     type: 'bar',
                     name: "全年额度",
@@ -1708,11 +1708,11 @@ var Popup_yxztfx = (function () {
                     barGap: "-100%",
                     barWidth: 40
                 }
-                
+
             ]
         };
         chart_qnshedhy.setOption(option_qnshedhy);
-   		   
+
    		//停电原因(预安排&故障)
    		var option_tdyy1 = {
    			tooltip:{
@@ -1738,7 +1738,7 @@ var Popup_yxztfx = (function () {
                     label:{
                     	fontSize:24,
                     	color:'#fff'
-                    	
+
                     },
                     data:[
                     	{
@@ -1797,11 +1797,11 @@ var Popup_yxztfx = (function () {
                     		}
                     	}
                 	]
-            
+
      		}]
         };
         chart_tdyy1.setOption(option_tdyy1);
-   		
+
    		var option_tdyy2 = {
    			tooltip:{
         		formatter:"{b} : {c}"
@@ -1876,14 +1876,14 @@ var Popup_yxztfx = (function () {
                     			color:'#1c417a'
                     		}
                     	}
-                    	
+
                 	]
-            
+
      		}]
         };
         chart_tdyy2.setOption(option_tdyy2);
-        
-        
+
+
         //趋势分析
         // 供电可靠率
         var option_gdkkl2 = {
@@ -1891,7 +1891,7 @@ var Popup_yxztfx = (function () {
                 show: true,
                 trigger: 'axis',
                 padding: 10
-                
+
             },
             legend: {
                 right: 60,
@@ -2041,7 +2041,7 @@ var Popup_yxztfx = (function () {
                 show: true,
                 trigger: 'axis',
                 padding: 10
-                
+
             },
             legend: {
                 right: 60,
@@ -2084,7 +2084,7 @@ var Popup_yxztfx = (function () {
                 splitLine: {
                     show:false
                 },
-                
+
             },
             xAxis: {
                 type: 'category',
@@ -2204,7 +2204,7 @@ var Popup_yxztfx = (function () {
                 splitLine: {
                     show:false
                 },
-                
+
             },
             xAxis: {
                 type: 'category',
@@ -2233,8 +2233,8 @@ var Popup_yxztfx = (function () {
                     data: data.chart_edhy2.ljedhy2,
                 },
 	            {
-	                name:'预安排',  
-	                type:'bar',   //类型 
+	                name:'预安排',
+	                type:'bar',   //类型
 	                stack:'预安排',
 	                barWidth:40,
 	                color:'#ff8a4a',
@@ -2242,8 +2242,8 @@ var Popup_yxztfx = (function () {
                     barGap: "1%"
 	            },
 	            {
-	                name:'故障',  
-	                type:'bar',   //类型 
+	                name:'故障',
+	                type:'bar',   //类型
 	                stack:'预安排',
 	                color:'#f81d3c',
 	                data:data.chart_edhy2.gzedhy2,
@@ -2395,7 +2395,7 @@ var Popup_yxztfx = (function () {
         };
         chart_tdyyr2.setOption(option_tdyyr2);
     }
-    
+
     function setData(newdata, isMarge) {
         if (!newdata) return;
         var isEmpty = true;
@@ -2410,7 +2410,7 @@ var Popup_yxztfx = (function () {
             }
         } else {
             f(newdata, data);
-        }       
+        }
         update();
     }
 

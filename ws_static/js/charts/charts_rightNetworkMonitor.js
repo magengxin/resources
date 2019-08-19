@@ -14,7 +14,7 @@ $(document).ready(function(){
  * 电网可靠性
  */
 function liquidFill() {
-	
+
     var liquidFill = echarts.init(document.getElementById('liquidFill'));
     option = {
         series: [{
@@ -55,7 +55,7 @@ function getDwkkx(qualified,option){
         type:'get',
         dataType: 'json',
         success: function (data) {
-        	debugger
+
         	if (data.data) {
                 option.series[0].data[0] = data.data[0].ZBZ/100;
                 qualified.setOption(option);
@@ -428,7 +428,7 @@ function quality(ssgs) {
             x: 'right', // for funnel
             itemStyle : labelFromatter,
             animation: false,
-            
+
             label: {
                 normal: {
                     show:'true',
@@ -546,7 +546,7 @@ function quality(ssgs) {
     };
     containers.setOption(option);
     getDianNengZhiLiangData(containers,option,ssgs);//Ajax请求方法
-    
+
     containers.on('click', function (parans) {
     	if (parans.seriesIndex == 0) {
 			ChooseShow("KHFW");
@@ -570,7 +570,7 @@ function quality(ssgs) {
 			showSuQiuList(null,null,g_deptchange);
     	}
     })
-    
+
 }
 /**
  * 设备状态
