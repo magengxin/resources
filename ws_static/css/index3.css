@@ -1,4 +1,6 @@
-
+ul,li{
+    list-style: none;
+}
 .yjgj_r{
     width: 1172px;
     margin: 0 auto;
@@ -24,11 +26,14 @@
 }
 .yjgj_title{
 	padding-bottom:40px;
-	
+
 }
 .taifeng{
 	height: 70px;
 	line-height: 120px;
+}
+.float-r{
+    float: right!important;
 }
 .yjgj_color{
     background: url("../img/yjgj_bg.png") no-repeat;
@@ -68,7 +73,7 @@
 }
 .bottom{
 	position: absolute;
-    width: 371px;   
+    width: 371px;
     display: none;
     top: 100px;
     z-index: 99;
@@ -159,7 +164,7 @@ img {
     background: url('../img/bg_title.png') no-repeat;
     width: 488px;
     height: 56px;
-    float: left; 
+    float: left;
 }
 
 .facility-four .facility-titie {
@@ -262,6 +267,14 @@ img {
 
 
 /*可靠性管控*/
+.gd_box_line{
+    padding: 10px 80px 0!important;
+}
+.gd_box_line .gd_model_box{
+    margin-left:0!important;
+    margin-top:0!important;
+    height: auto!important;
+}
 .gd_box:after{
     content: "";
     display: block;
@@ -274,28 +287,29 @@ img {
 }
 .gd_model_box{
     margin-left: 80px;
-    overflow: hidden; 
     height: 400px;
     float: left;
     margin-top: 18px;
     position: relative;
 }
 .gd_model{
+    position: relative;
     float: left;
 }
+
 .gd_left{
-    
+
     background: url(../../ws_static/img/bg_title.png) no-repeat;
     width: 488px;
     height: 56px;
-  
+
     line-height: 30px;
 }
 .gd_left_2{
  	background: url(../../ws_static/img/gd_title1.png) no-repeat;
     width: 562px;
     height: 56px;
-  
+
     line-height: 30px;
 }
 .gd_tip{
@@ -309,6 +323,24 @@ img {
     width: 240px;
     text-align: center;
     color: #fff;
+}
+.gd_left_title{
+    margin: 0;
+    font-weight: 700;
+}
+.gd_left_dec{
+    position: absolute;
+    bottom: 40px;
+    right: -20px;
+    width: 100%!important;
+    text-align: right!important;
+    font-size: 28px;
+}
+.title_color{
+    color:#17c6ff!important;
+}
+.dec_color{
+    color:#17a3bc!important;
 }
 .gd_left_2 p{
     width: 409px;
@@ -327,6 +359,14 @@ img {
     line-height: 40px;
     cursor: pointer;
 }
+.gd_sel_line{
+    position: relative!important;
+    top: auto!important;
+    right: auto!important;
+}
+.gd_sel_line p{
+    width: 100%;
+}
 .gd_sel ul{
   width: 100%;
   position: absolute;
@@ -334,7 +374,7 @@ img {
  z-index: 1000;
  background: #104568;
  display: none;
-   
+
 }
 .gd_sel ul li{
     width: 100%;
@@ -342,8 +382,7 @@ img {
     font-size: 28px;
     line-height: 40px;
     cursor: pointer;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 .gd_sel ul li:hover{
     background-color: #2194de;
@@ -378,7 +417,7 @@ img {
     clear: both;
 }
 .content-chart{
-    
+
     position: relative;
 }
 .gd_catchl{
@@ -476,7 +515,7 @@ img {
      background: url(../../ws_static/img/gd_title2.png) no-repeat;
      width: 630px;
     height: 56px;
-  
+
     line-height: 30px;
     margin-left: 80px;
 }
@@ -557,4 +596,29 @@ img {
 }
 .gd_table_p >span{
     color: rgb(28,189,245);
+}
+
+
+/**
+ 用电状态
+ */
+.monitoring_title_box{
+    display: flex;
+    align-content: center;
+    padding: 0 80px;
+}
+.monitoring_circular_box{
+    display: flex;
+}
+.monitoring_title_box .monitoring_title_container{
+    display: flex;
+    width: 200px;
+    font-size: 30px;
+    color: #fff;
+}
+.monitoring_title_box .monitoring_title_container:not(.first){
+    margin-left: 30px;
+}
+.monitoring_title_container_color_blue{
+    color: blue!important;
 }

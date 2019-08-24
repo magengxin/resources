@@ -105,7 +105,7 @@ $('.status_tab3 li').on('click', function() {
 });
 $('.status_line li').on('click', function() {
   var num = $(this).index();
-  var showTab = $('.line_box');
+  var showTab = $('.dianwang-item');
   $(this).addClass('active_tab').siblings().removeClass('active_tab');
   showTab.eq(num).removeClass('hide').siblings('div').addClass('hide');
 });

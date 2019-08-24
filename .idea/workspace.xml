@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0d87dcd-ca04-498e-9801-3c7cd799729a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/dwzt-dwyc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/arrow-down-active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/arrow-down-disable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/arrow-up-active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/arrow-up-disable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/bg_title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/icon1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/icon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/title1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/yuan-active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/images/yuan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/wljc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/jbhm/ydzt-wljc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ws_static/css/wljc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ws_static/js/dwzt-dwyc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ws_static/js/wljc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/jbhm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/jbhm/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/jbhm/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/jbhm/contrast/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/jbhm/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/jbhm/contrast/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/jbhm/qwzt_gdfw.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/jbhm/contrast/qwzt_gdfw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/jbhm/qwzt_gdfw.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/jbhm/contrast/qwzt_gdfw.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/jbhm/sb.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/jbhm/contrast/sb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ws_static/css/index3.css" beforeDir="false" afterPath="$PROJECT_DIR$/ws_static/css/index3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ws_static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ws_static/js/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +49,20 @@
   <component name="ProjectId" id="1PXpne56XB5QnEeYirTthGjrE24" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/phpStudy/PHPTutorial/WWW/order/application" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/webpage/jbhm" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.scopes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\project\resources\webpage\jbhm" />
+      <recent name="D:\Work\project\resources\ws_static\js" />
+      <recent name="D:\Work\project\resources\ws_static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\project\resources\webpage\jbhm\参考" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -41,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.111.html">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -128,6 +163,22 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
+    <configuration name="111.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/resources/webpage/jbhm/111.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="dwzt-dwyc.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/resources/webpage/jbhm/dwzt-dwyc.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/resources/webpage/jbhm/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.111.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.dwzt-dwyc.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\kx520\AppData\Roaming\Subversion</configuration>
@@ -139,7 +190,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566030464352</updated>
-      <workItem from="1566030468932" duration="3016000" />
+      <workItem from="1566030468932" duration="4141000" />
+      <workItem from="1566177881646" duration="6880000" />
+      <workItem from="1566263917203" duration="3435000" />
+      <workItem from="1566270815595" duration="788000" />
+      <workItem from="1566281625965" duration="1044000" />
+      <workItem from="1566439706842" duration="1247000" />
+      <workItem from="1566530907230" duration="305000" />
+      <workItem from="1566540694294" duration="18643000" />
     </task>
     <servers />
   </component>
@@ -163,6 +221,7 @@
           <value>
             <State>
               <option name="BEK_SORT_TYPE" value="1" />
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
