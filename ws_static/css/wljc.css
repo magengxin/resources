@@ -99,16 +99,19 @@ ul,li{
 .dec-list .head-font-color{
   color: #a0b9ca;
 }
-.dec-list .item-head .main p,
+.dec-list .item-head .main p{
+  width: 40%;
+}
+.dec-list .item-head .main p:last-of-type{
+  width: 20%;
+}
 .dec-list .item-main .item p{
   width: 33.333%;
 }
 .dec-list{}
 .dec-list .item-main{
 }
-li{
-  display: none;
-}
+
 .wljc-list{
   /*padding: 38px 30px;*/
   border-left: 6px solid #446d86;
@@ -118,6 +121,12 @@ li{
 }
 .wljc-list .ul-box{
   position: relative;
+}
+.wljc-list .ul-box ul{
+  display: none;
+}
+.wljc-list .ul-box ul.on{
+  display: block!important;
 }
 .wljc-list .ul-box .main{
   display: flex;
@@ -261,7 +270,6 @@ li{
   margin-right: 16px;
 }
 .paging-arrow-up.disable{
-
   background: url("../../webpage/jbhm/images/arrow-up-disable.png");
   background-size: cover;
 }
