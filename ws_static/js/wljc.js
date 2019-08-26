@@ -2,6 +2,7 @@ window.onload = function () {
   var num = 1;
 
   var ulBox = $('.wljc-list').children('.ul-box'),
+      ulList = $('.ul-list'),
       len = ulBox.length;
 
   $('.item-handle').click(function () {
@@ -28,6 +29,9 @@ window.onload = function () {
 
     num--;
 
+    // 下一页按钮状态
+    $(this).siblings().removeClass('disable').addClass('active');
+
     // 其他移除ul，当前添加 active
     ulBox.siblings().removeClass('bg').eq(num - 1).addClass('active bg');
 
@@ -46,15 +50,17 @@ window.onload = function () {
 
     num++;
 
-
     // 上一页按钮状态
     $(this).siblings().removeClass('disable').addClass('active');
 
     // 其他移除ul，当前添加 active
-    ulBox.siblings().removeClass('bg').eq(num - 1).addClass('active bg')
+    ulBox.siblings().removeClass('bg').eq(num - 1).addClass('active bg');
 
     // 其他ul隐藏，当前显示ul
     ulBox.siblings().find(".item-list").slideUp(500).removeClass('active').end().eq(num - 1).find(".item-list").slideDown(500).addClass('active');
+
+    // 隐藏含有button下面的list
+    $('.open').siblings().slideUp(500);
 
     // 禁用按钮
     if (num >= len) {
@@ -66,6 +72,6 @@ window.onload = function () {
 
   // 打开弹框
   $('.open').click(function () {
-    $(this).siblings().removeClass('display-hidden').slideDown(500);
+    $(this).siblings().removeClass('hidden').slideDown(500);
   })
 }

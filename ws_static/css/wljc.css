@@ -18,7 +18,7 @@ ul,li{
   display: flex;
   align-items: center;
 }
-.display-hidden{
+.hidden{
   display: none!important;
 }
 .white-space{
@@ -135,10 +135,13 @@ ul,li{
 .wljc-list .ul-box.active{
   /*padding-top: 20px;*/
 }
-.wljc-list .ul-box.active .ul-list{
+.wljc-list .ul-box.active .block{
   display: block;
 }
-.wljc-list .ul-box .ul-list{
+.wljc-list .ul-box .block{
+  display: none;
+}
+.wljc-list .ul-box.active .hidden{
   display: none;
 }
 .wljc-list .ul-box.active .ul-bg{
