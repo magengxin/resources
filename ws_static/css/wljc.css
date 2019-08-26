@@ -133,9 +133,22 @@ ul,li{
   padding-top: 20px;
 }
 .wljc-list .ul-box.active .ul-bg{
+  position: relative;
   margin-left: 4%;
   padding: 10px 30px;
   width: 96%;
+}
+.wljc-list .ul-box.bg .ul-bg:before{
+  content: '';
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-right: 50px solid #2194de;
+  border-bottom: 30px solid transparent;
 }
 .wljc-list .ul-box.bg .ul-bg{
   background: rgba(0,0,0,0.2);

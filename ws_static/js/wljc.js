@@ -1,6 +1,9 @@
 window.onload = function () {
   var num = 1;
 
+  var ulBox = $('.wljc-list').children('.ul-box'),
+      len = ulBox.length;
+
   $('.item-handle').click(function () {
     var index = $(this).parent().index();
     if (index < num) {
@@ -19,16 +22,29 @@ window.onload = function () {
       // $(this).parent('.ul-box').addClass("active");
     }
   });
+
+  // 上一步
+  $('.paging-arrow-up').click(function () {
+
+    num--;
+
+    // 其他移除ul，当前添加 active
+    ulBox.siblings().removeClass('bg').eq(num - 1).addClass('active bg');
+
+    // 其他ul隐藏，当前显示ul
+    ulBox.siblings().find("ul").slideUp(500).removeClass('on').end().eq(num - 1).find("ul").slideDown(500).addClass('on');
+
+    // 禁用按钮
+    if (num <= 1) {
+      $(this).removeClass('active').addClass('disable');
+      return false
+    }
+  });
+
+  // 下一步
   $('.paging-arrow-down').click(function () {
-    var ulBox = $('.wljc-list').children('.ul-box');
-    var len = ulBox.length;
 
     num++;
-    console.log("len", len);
-
-
-    // TODO: num 8 按钮没有置灰
-    // TODO: 已经选择的可以完成手风琴效果
 
     $(this).siblings().removeClass('disable').addClass('active');
 
@@ -36,12 +52,9 @@ window.onload = function () {
 
     // 其他移除ul，当前添加 active
     ulBox.siblings().removeClass('bg').eq(num - 1).addClass('active bg')
-    // ulBox.eq(num - 1).addClass('active')
 
     // 其他ul隐藏，当前显示ul
-    // ulBox.siblings().children("ul").slideDown(500).eq(num - 1).children("ul").slideUp(500);
     ulBox.siblings().find("ul").slideUp(500).removeClass('on').end().eq(num - 1).find("ul").slideDown(500).addClass('on');
-    // ulBox.siblings().find(".ul-bg").slideUp(500).removeClass('active').end().eq(num - 1).find("ul-bg").slideDown(500).addClass('active');
 
     // 禁用按钮
     if (num >= len) {
@@ -49,4 +62,5 @@ window.onload = function () {
       return false
     }
   })
+  // TODO: 第四步，点击按钮出现list之后才可以点击下一步，在此之前不能点击，下一步按钮置灰。需要查看num变量的变化
 }
