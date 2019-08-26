@@ -19,7 +19,7 @@ ul,li{
   align-items: center;
 }
 .display-hidden{
-  display: none;
+  display: none!important;
 }
 .white-space{
   overflow:hidden;
@@ -133,7 +133,7 @@ ul,li{
   padding: 0 0 0 40px;
 }
 .wljc-list .ul-box.active{
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 .wljc-list .ul-box.active .ul-list{
   display: block;

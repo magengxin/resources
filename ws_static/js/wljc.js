@@ -32,7 +32,7 @@ window.onload = function () {
     ulBox.siblings().removeClass('bg').eq(num - 1).addClass('active bg');
 
     // 其他ul隐藏，当前显示ul
-    ulBox.siblings().find("ul").slideUp(500).removeClass('on').end().eq(num - 1).find("ul").slideDown(500).addClass('on');
+    ulBox.siblings().find(".item-list").slideUp(500).removeClass('active').end().eq(num - 1).find(".item-list").slideDown(500).addClass('active');
 
     // 禁用按钮
     if (num <= 1) {
@@ -46,6 +46,7 @@ window.onload = function () {
 
     num++;
 
+
     // 上一页按钮状态
     $(this).siblings().removeClass('disable').addClass('active');
 
@@ -53,7 +54,7 @@ window.onload = function () {
     ulBox.siblings().removeClass('bg').eq(num - 1).addClass('active bg')
 
     // 其他ul隐藏，当前显示ul
-    ulBox.siblings().find(".item-list").slideUp(500).removeClass('on').end().eq(num - 1).find(".item-list").slideDown(500).addClass('on');
+    ulBox.siblings().find(".item-list").slideUp(500).removeClass('active').end().eq(num - 1).find(".item-list").slideDown(500).addClass('active');
 
     // 禁用按钮
     if (num >= len) {
@@ -64,7 +65,7 @@ window.onload = function () {
   // TODO: 第四步，点击按钮出现list之后才可以点击下一步，在此之前不能点击，下一步按钮置灰。需要查看num变量的变化
 
   // 打开弹框
-  $('.open').click(function(){
-    $(this).siblings().find("ul").slideDown(500);
+  $('.open').click(function () {
+    $(this).siblings().removeClass('display-hidden').slideDown(500);
   })
 }
