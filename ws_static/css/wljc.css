@@ -18,6 +18,9 @@ ul,li{
   display: flex;
   align-items: center;
 }
+.display-hidden{
+  display: none;
+}
 .white-space{
   overflow:hidden;
   text-overflow:ellipsis;
@@ -132,6 +135,12 @@ ul,li{
 .wljc-list .ul-box.active{
   padding-top: 20px;
 }
+.wljc-list .ul-box.active .ul-list{
+  display: block;
+}
+.wljc-list .ul-box .ul-list{
+  display: none;
+}
 .wljc-list .ul-box.active .ul-bg{
   position: relative;
   margin-left: 4%;
@@ -156,10 +165,13 @@ ul,li{
 .wljc-list .ul-box.active .item-handle{
   padding: 0!important;
 }
-.wljc-list .ul-box ul{
+.wljc-list .ul-box .item-list{
   display: none;
 }
-.wljc-list .ul-box ul.on{
+.wljc-list .ul-box.active .item-list{
+  display: block;
+}
+.wljc-list .ul-box ul.active{
   display: block!important;
 }
 .wljc-list .ul-box .main{
@@ -249,6 +261,18 @@ ul,li{
   height: 35px;
   background: url("../../webpage/jbhm/images/yuan.png");
   background-size: cover;
+}
+.item-list{
+  margin-top: 20px;
+}
+.item-list .open{
+  padding: 20px 30px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  background: #3a7fff;
+  cursor: pointer;
 }
 .ul-box.active .yuan{
   background: url("../../webpage/jbhm/images/yuan-active.png");
