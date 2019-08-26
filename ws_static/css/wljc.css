@@ -129,10 +129,15 @@ ul,li{
 .wljc-list .ul-box .ul-bg{
   padding: 0 0 0 40px;
 }
+.wljc-list .ul-box.active{
+  padding-top: 20px;
+}
 .wljc-list .ul-box.active .ul-bg{
   margin-left: 4%;
   padding: 10px 30px;
   width: 96%;
+}
+.wljc-list .ul-box.bg .ul-bg{
   background: rgba(0,0,0,0.2);
 }
 .wljc-list .ul-box.active .item-handle{
