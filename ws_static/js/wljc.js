@@ -86,6 +86,6 @@ window.onload = function () {
   // 打开弹框
   $('.open').click(function () {
     $(this).siblings().removeClass('hidden').slideDown(500);
-    $(this).parent('.ul-box').find('.item-title-color').removeClass('hidden');
+    $(this).parents('.ul-box').find('.item-title-color').removeClass('hidden');
   })
 }

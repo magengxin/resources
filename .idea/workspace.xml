@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f0d87dcd-ca04-498e-9801-3c7cd799729a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/webpage/jbhm/ydzt-wljc.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/jbhm/ydzt-wljc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws_static/css/wljc.css" beforeDir="false" afterPath="$PROJECT_DIR$/ws_static/css/wljc.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ws_static/js/wljc.js" beforeDir="false" afterPath="$PROJECT_DIR$/ws_static/js/wljc.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -187,7 +186,7 @@
       <workItem from="1566886386151" duration="9723000" />
       <workItem from="1566956701739" duration="3293000" />
       <workItem from="1566975222730" duration="1098000" />
-      <workItem from="1566984378239" duration="6817000" />
+      <workItem from="1566984378239" duration="7342000" />
     </task>
     <servers />
   </component>
