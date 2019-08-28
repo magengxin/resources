@@ -147,7 +147,7 @@ ul,li{
 .wljc-list .ul-box.active .ul-bg{
   position: relative;
   margin-left: 4%;
-  padding: 10px 30px;
+  padding: 20px 30px;
   width: 96%;
 }
 .wljc-list .ul-box.bg .ul-bg:before{
@@ -158,18 +158,19 @@ ul,li{
   top: 20px;
   width: 0;
   height: 0;
-  border-top: 30px solid transparent;
-  border-right: 50px solid #2194de;
-  border-bottom: 30px solid transparent;
+  border-top: 10px solid transparent;
+  border-right: 18px solid rgba(17,34,17,.2);
+  border-bottom: 10px solid transparent
 }
 .wljc-list .ul-box.bg .ul-bg{
-  background: rgba(0,0,0,0.2);
+  background: rgba(17,34,17,.2);
 }
 .wljc-list .ul-box.active .item-handle{
   padding: 0!important;
 }
 .wljc-list .ul-box .item-list{
   display: none;
+  margin: 0 40px;
 }
 .wljc-list .ul-box.active .item-list{
   display: block;
@@ -180,17 +181,28 @@ ul,li{
 .wljc-list .ul-box .main{
   display: flex;
   align-items: center;
-  height: 60px;
-  padding: 0 50px;
+  height: 80px;
+  /*padding: 0 50px;*/
 
   font-size: 24px;
-  color: darkgoldenrod;
+  color: #ffe011;
 }
-.wljc-list .ul-box .main .time{
-  margin-right: 10px;
+.wljc-list .ul-box .main .dec-arrow{
+  font-size: 20px;
+  color: #08f957;
+}
+.wljc-list .ul-box .main .dec-time{
+  margin-right: 40px;
+}
+.wljc-list .ul-box .main .dec-word{
+  margin: 0 10px;
 }
 .wljc-list .ul-box .main .dec{
-  color: #3a7fff;
+  margin-left: 10px;
+  color: #d6e5ef;
+}
+.wljc-list .ul-box .main .dec-color{
+  color: #d6e5ef;
 }
 .wljc-list .ul-box.active{
   position: relative;
@@ -269,13 +281,15 @@ ul,li{
   margin-top: 20px;
 }
 .item-list .open{
-  padding: 20px 30px;
-  line-height: 50px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
   text-align: center;
   font-size: 24px;
   color: #fff;
-  background: #3a7fff;
+  background: #1d92de;
   cursor: pointer;
+  border-radius: 2%;
 }
 .ul-box.active .yuan{
   background: url("../../webpage/jbhm/images/yuan-active.png");
@@ -286,16 +300,21 @@ ul,li{
 }
 .ul-box .item-title-color{
   display: none;
-  color: red;
+  color: #31beff;
 }
 .ul-box .time{
-  display: none;
+  visibility: hidden;
+  width: 140px;
+  color: #fff;
+}
+.ul-box .time .arrow-down{
+  margin-left: 10px;
 }
 .ul-box.active .item-title-color{
   display: block;
 }
 .ul-box.active .time{
-  display: block;
+  visibility: visible;
 }
 .ul-box.active .arrow-up{
   display: none;
@@ -317,6 +336,39 @@ ul,li{
   height: 8px;
   background: url("../../webpage/jbhm/images/down.png");
   background-size: cover;
+}
+/* 4 */
+.item-list .ysdx{
+  padding-top: 20px;
+  border-top: 2px solid #165d8b;
+}
+
+.item-list .ysdx .ysdx-head span{
+  width: 33.33%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  color: #a0bdcf;
+}
+.item-list .ysdx .ysdx-main .main-item div{
+  width: 33.33%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 26px;
+  color: #edf8ff;
+}
+.item-list .ysdx .ysdx-main .main-item .item-right{
+  justify-content: space-between;
+}
+.item-list .ysdx .ysdx-main .main-item .item-right .queren-button{
+  display: block;
+  width: 64px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background: #1d92de;
 }
 
 /* fenye */
