@@ -70,6 +70,8 @@ window.onload = function () {
     // 隐藏含有button下面的list
     $('.open').siblings().slideUp(500);
 
+    $('.znyp-list').addClass('hidden');
+
     // 禁用按钮
     if (num >= len) {
       $(this).removeClass('active').addClass('disable');
@@ -81,11 +83,16 @@ window.onload = function () {
 
   // TODO: 页面完成 接口连上
 
-  // TODO: 第五部 弹框
+  // TODO: 手风琴效果 点击效果
 
   // 打开弹框
   $('.open').click(function () {
     $(this).siblings().removeClass('hidden').slideDown(500);
     $(this).parents('.ul-box').find('.item-title-color').removeClass('hidden');
+  })
+
+  // 打开弹框
+  $('.show-list').click(function () {
+    $(this).parent().siblings().removeClass('hidden').slideDown(500);
   })
 }

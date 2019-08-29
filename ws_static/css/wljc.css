@@ -188,9 +188,13 @@ ul,li{
   color: #ffe011;
 }
 .wljc-list .ul-box .main .dec-arrow{
+  display: inline-block;
   margin-right: 10px;
-  font-size: 20px;
-  color: #08f957;
+
+  width: 28px;
+  height: 22px;
+  background: url("../../webpage/jbhm/images/right.png");
+  background-size: cover;
 }
 .wljc-list .ul-box .main .dec-time{
   margin-right: 40px;
@@ -202,8 +206,8 @@ ul,li{
   margin-left: 10px;
   color: #d6e5ef;
 }
-.wljc-list .ul-box .main .dec-color{
-  color: #d6e5ef;
+.dec-color{
+  color: #d6e5ef!important;
 }
 .wljc-list .ul-box.active{
   position: relative;
@@ -406,4 +410,48 @@ ul,li{
 .paging-arrow-down.active{
   background: url("../../webpage/jbhm/images/arrow-down-active.png");
   background-size: cover;
+}
+
+/*智能预判*/
+.znyp-list{
+  position: relative;
+  border-top: 2px solid rgba(28,94,135,.4);
+  padding-top: 17px;
+}
+.znyp-list:before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 70px;
+  height: 10px;
+  background: url("../../webpage/jbhm/images/tixing.png");
+  background-size:cover;
+}
+.znyp-list .show-head-wid{
+}
+.znyp-list .show-head-wid div{
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 24px;
+  border: 2px solid rgba(22,106 ,158,.4);
+}
+.znyp-list .dis-flex div:not(.first){
+  border-left: none!important;
+}
+.znyp-list .show-main-item div{
+  border-top: none!important;
+}
+.znyp-list .show-head-wid div:nth-of-type(1),
+.znyp-list .show-head-wid div:nth-of-type(2) {
+  width: 30%;
+}
+.znyp-list .show-head-wid div:nth-of-type(3),
+.znyp-list .show-head-wid div:nth-of-type(4) {
+  width: 20%;
+}
+.znyp-list .show-main {
+  color: #ffe011;
 }
