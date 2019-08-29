@@ -65,7 +65,7 @@ window.onload = function () {
     ulBox.siblings().removeClass('bg').eq(num - 1).addClass('active bg');
 
     // 其他ul隐藏，当前显示ul
-    ulBox.siblings().find(".item-list").slideUp(500).removeClass('active').end().eq(num - 1).find(".item-list").slideDown(500).addClass('active');
+    ulBox.eq(num - 1).find(".item-list").slideDown(500).addClass('active').end().siblings().find(".item-list").slideUp(500).removeClass('active');
 
     // 隐藏含有button下面的list
     $('.open').siblings().slideUp(500);
